@@ -6,7 +6,8 @@
      steps:
        - checkout
        - run:
-         command: ".circleci/commit_check.sh moduleA/"
+           command: |
+             .circleci/commit_check.sh moduleA/
        - run: echo "A first hello"
        - run: sleep 25
    two:
