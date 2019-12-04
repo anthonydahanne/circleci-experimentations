@@ -5,6 +5,9 @@
        - image: circleci/ruby:2.4.1
      steps:
        - checkout
+       - run:
+         command: |
+           .circleci/commit_check.sh moduleA/
        - run: echo "A first hello"
        - run: sleep 25
    two:
